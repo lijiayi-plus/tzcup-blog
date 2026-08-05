@@ -20,29 +20,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lijiayi-plus.github.io","root":"/tzcup-blog/","images":"/tzcup-blog/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":150,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/tzcup-blog/js/config.js" defer></script>
 
-    <meta name="description" content="原文：《LSKNet: A Foundation Lightweight Backbone for  Remote Sensing》仓库：zcablii&#x2F;LSKNet: (IJCV2024 &amp; ICCV2023) LSKNet: A Foundation Lightweight Backbone for Remote Sensing 这个网络解决的核心的问题：是现有的网络，往往只">
+    <meta name="description" content="Strip R-CNN 论文原文：Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detection代码仓库：YXB-NKU&#x2F;Strip-R-CNN: [AAAI 2026]”Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detec">
 <meta property="og:type" content="article">
-<meta property="og:title" content="F：lsknet的基本结构">
-<meta property="og:url" content="https://lijiayi-plus.github.io/tzcup-blog/2026/07/30/F%EF%BC%9Alsknet%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:title" content="strip R-CNN">
+<meta property="og:url" content="https://lijiayi-plus.github.io/tzcup-blog/2026/08/05/strip-R-CNN/index.html">
 <meta property="og:site_name" content="tzcup-blog">
-<meta property="og:description" content="原文：《LSKNet: A Foundation Lightweight Backbone for  Remote Sensing》仓库：zcablii&#x2F;LSKNet: (IJCV2024 &amp; ICCV2023) LSKNet: A Foundation Lightweight Backbone for Remote Sensing 这个网络解决的核心的问题：是现有的网络，往往只">
+<meta property="og:description" content="Strip R-CNN 论文原文：Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detection代码仓库：YXB-NKU&#x2F;Strip-R-CNN: [AAAI 2026]”Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detec">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260730081244183.png">
-<meta property="article:published_time" content="2026-07-30T00:27:44.000Z">
-<meta property="article:modified_time" content="2026-07-30T00:29:39.159Z">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/1.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/3.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/4.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/5.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260805130121177.png">
+<meta property="article:published_time" content="2026-08-05T05:03:30.000Z">
+<meta property="article:modified_time" content="2026-08-05T05:04:28.353Z">
 <meta property="article:author" content="+1">
 <meta property="article:tag" content="挑战杯,竞赛记录,项目日志,学习笔记,tech">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260730081244183.png">
+<meta name="twitter:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/1.png">
 
 
-<link rel="canonical" href="https://lijiayi-plus.github.io/tzcup-blog/2026/07/30/F%EF%BC%9Alsknet%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
+<link rel="canonical" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/05/strip-R-CNN/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lijiayi-plus.github.io/tzcup-blog/2026/07/30/F%EF%BC%9Alsknet%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/","path":"2026/07/30/F：lsknet的基本结构/","title":"F：lsknet的基本结构"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lijiayi-plus.github.io/tzcup-blog/2026/08/05/strip-R-CNN/","path":"2026/08/05/strip-R-CNN/","title":"strip R-CNN"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>F：lsknet的基本结构 | tzcup-blog</title>
+<title>strip R-CNN | tzcup-blog</title>
   
 
 
@@ -136,7 +140,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Backbone%EF%BC%9ALSKNet"><span class="nav-number">1.</span> <span class="nav-text">Backbone：LSKNet</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#LSKNet-T"><span class="nav-number">1.1.</span> <span class="nav-text">LSKNet-T</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LSKNet-S"><span class="nav-number">1.2.</span> <span class="nav-text">LSKNet-S</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Neck%EF%BC%9AFPN"><span class="nav-number">2.</span> <span class="nav-text">Neck：FPN</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A3%80%E6%B5%8B%E5%A4%B4%EF%BC%9AOriented-R-CNN"><span class="nav-number">3.</span> <span class="nav-text">检测头：Oriented R-CNN</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Strip-R-CNN-%E8%AE%BA%E6%96%87"><span class="nav-number">1.</span> <span class="nav-text">Strip R-CNN 论文</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%A7%A3%E5%86%B3%E7%9A%84%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">网络解决的核心问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BD%91%E7%BB%9C%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">2.网络整体结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C%EF%BC%9A"><span class="nav-number">1.3.</span> <span class="nav-text">实验结果：</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -196,7 +200,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/07/30/F%EF%BC%9Alsknet%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/">
+    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/05/strip-R-CNN/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/a1338ef4559b2143851e654ac8df8733.jpeg">
@@ -209,12 +213,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="F：lsknet的基本结构 | tzcup-blog">
+      <meta itemprop="name" content="strip R-CNN | tzcup-blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          F：lsknet的基本结构
+          strip R-CNN
         </h1>
 
         <div class="post-meta-container">
@@ -226,7 +230,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-07-30 08:27:44 / 修改时间：08:29:39" itemprop="dateCreated datePublished" datetime="2026-07-30T08:27:44+08:00">2026-07-30</time>
+      <time title="创建时间：2026-08-05 13:03:30 / 修改时间：13:04:28" itemprop="dateCreated datePublished" datetime="2026-08-05T13:03:30+08:00">2026-08-05</time>
     </span>
 
   
@@ -245,26 +249,15 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p>原文：《LSKNet: A Foundation Lightweight Backbone for  Remote Sensing》<br>仓库：<a target="_blank" rel="noopener" href="https://github.com/zcablii/LSKNet">zcablii&#x2F;LSKNet: (IJCV2024 &amp; ICCV2023) LSKNet: A Foundation Lightweight Backbone for Remote Sensing</a></p>
-<p>这个网络解决的核心的问题：是现有的网络，往往只是去看那个目标本身。但是，那失去了很多上下文的信息。LSKnet采用大卷积核的方式，能够获得更大的感受野。同时，LSKnet可以动态调整其感受野，使得其在识别目标及其背景信息中，有很好的检测效果。原文的论述如下：</p>
-<blockquote>
-<p>In particular, most objects in aerial images may be small and difficult to identify based on their appearance alone. Instead, recognizing these objects relies on their context, as the surrounding environment can provide valuable clues about their shape, orientation, and other characteristics.</p>
-</blockquote>
-<p>其次是一个现实情况：有一些目标需要的上下文信息很少，比如说足球场；有一些目标需要的上下文很大，比如说FSC这种。</p>
-<p><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260730081244183.png" alt="image.png"></p>
-<p>从其主图不难发现，这个网络有两个不同规模的感受野。</p>
-<h2 id="Backbone：LSKNet"><a href="#Backbone：LSKNet" class="headerlink" title="Backbone：LSKNet"></a>Backbone：LSKNet</h2><h3 id="LSKNet-T"><a href="#LSKNet-T" class="headerlink" title="LSKNet-T"></a>LSKNet-T</h3><ul>
-<li>四阶段通道数：<code>[32, 64, 160, 256]</code></li>
-<li>四阶段 Block 数：<code>[3, 3, 5, 2]</code></li>
-<li>主干参数量：约 <strong>4.3M</strong></li>
+    <div class="post-body" itemprop="articleBody"><h2 id="Strip-R-CNN-论文"><a href="#Strip-R-CNN-论文" class="headerlink" title="Strip R-CNN 论文"></a>Strip R-CNN 论文</h2><p>原文：Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detection<br>代码仓库：<a target="_blank" rel="noopener" href="https://github.com/YXB-NKU/Strip-R-CNN">YXB-NKU&#x2F;Strip-R-CNN: [AAAI 2026]”Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detection”</a></p>
+<h3 id="网络解决的核心问题"><a href="#网络解决的核心问题" class="headerlink" title="网络解决的核心问题"></a>网络解决的核心问题</h3><p>Strip R-CNN 主要解决的是：遥感图像中的高长宽比目标，也就是细长目标，难以提取完整特征，并且难以进行精确定位。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/1.png" alt="1.png"><br>可以看出strip R-CNN 方法相比其他方法的mAP更高，尤其是在长宽比大的时候优势更明显。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/3.png" alt="3.png"></p>
+<p>比较了LSKNet,PKINet,Strip R-CNN 三种方法的结构说，Strip R-CNN的结构Param最小，但mAP最高，说明了它的结构更优。</p>
+<h3 id="2-网络整体结构"><a href="#2-网络整体结构" class="headerlink" title="2.网络整体结构"></a>2.网络整体结构</h3><p>Strip R-CNN 建立在 <strong>Oriented R-CNN</strong> 框架上:</p>
+<ul>
+<li>使用 StripNet 替换原 Backbone；</li>
+<li>使用 Strip Head 替换原 Detection Head。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/4.png" alt="4.png"><br> 这是StripNet Backbone的结构<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/5.png" alt="5.png"><br>这是Strip head的结构</li>
 </ul>
-<h3 id="LSKNet-S"><a href="#LSKNet-S" class="headerlink" title="LSKNet-S"></a>LSKNet-S</h3><ul>
-<li>四阶段通道数：<code>[64, 128, 320, 512]</code></li>
-<li>四阶段 Block 数：<code>[2, 2, 4, 2]</code></li>
-<li>主干参数量：约 <strong>14.4M</strong></li>
-</ul>
-<h2 id="Neck：FPN"><a href="#Neck：FPN" class="headerlink" title="Neck：FPN"></a>Neck：FPN</h2><p>最最基础的FPN，并没有使用 PANet、PAFPN、BiFPN 等改进型 Neck</p>
-<h2 id="检测头：Oriented-R-CNN"><a href="#检测头：Oriented-R-CNN" class="headerlink" title="检测头：Oriented R-CNN"></a>检测头：Oriented R-CNN</h2><p>也是最基础的</p>
+<h3 id="实验结果："><a href="#实验结果：" class="headerlink" title="实验结果："></a>实验结果：</h3><p>1.说明strip R-CNN  FLOPs 低，mAP 高，以此来说明该方法的优越性。<br>2.消融实验说明了条带卷积核大小的最佳配置(19,19,19,19)，顺序条带卷积优于并行条带卷积以及StripNet 的通用性。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260805130121177.png" alt="image.png"></p>
 
     </div>
 
@@ -278,14 +271,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/tzcup-blog/2026/07/27/F-%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="prev" title="F: 一些模型的基础知识">
-                  <i class="fa fa-angle-left"></i> F: 一些模型的基础知识
+                <a href="/tzcup-blog/2026/07/30/F%EF%BC%9Alsknet%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%BB%93%E6%9E%84/" rel="prev" title="F：lsknet的基本结构">
+                  <i class="fa fa-angle-left"></i> F：lsknet的基本结构
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/tzcup-blog/2026/08/05/strip-R-CNN/" rel="next" title="strip R-CNN">
-                  strip R-CNN <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

@@ -146,7 +146,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/tzcup-blog/archives/">
-          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -181,6 +181,84 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/05/strip-R-CNN/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/a1338ef4559b2143851e654ac8df8733.jpeg">
+      <meta itemprop="name" content="+1">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tzcup-blog">
+      <meta itemprop="description" content="一个挑战杯小组的一些笔记、日志。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | tzcup-blog">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/tzcup-blog/2026/08/05/strip-R-CNN/" class="post-title-link" itemprop="url">strip R-CNN</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-08-05 13:03:30 / 修改时间：13:04:28" itemprop="dateCreated datePublished" datetime="2026-08-05T13:03:30+08:00">2026-08-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="Strip-R-CNN-论文"><a href="#Strip-R-CNN-论文" class="headerlink" title="Strip R-CNN 论文"></a>Strip R-CNN 论文</h2><p>原文：Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detection<br>代码仓库：<a target="_blank" rel="noopener" href="https://github.com/YXB-NKU/Strip-R-CNN">YXB-NKU&#x2F;Strip-R-CNN: [AAAI 2026]”Strip R-CNN: Large Strip Convolution for Remote Sensing Object Detection”</a></p>
+<h3 id="网络解决的核心问题"><a href="#网络解决的核心问题" class="headerlink" title="网络解决的核心问题"></a>网络解决的核心问题</h3><p>Strip R-CNN 主要解决的是：遥感图像中的高长宽比目标，也就是细长目标，难以提取完整特征，并且难以进行精确定位。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/1.png" alt="1.png"><br>可以看出strip R-CNN 方法相比其他方法的mAP更高，尤其是在长宽比大的时候优势更明显。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/3.png" alt="3.png"></p>
+<p>比较了LSKNet,PKINet,Strip R-CNN 三种方法的结构说，Strip R-CNN的结构Param最小，但mAP最高，说明了它的结构更优。</p>
+<h3 id="2-网络整体结构"><a href="#2-网络整体结构" class="headerlink" title="2.网络整体结构"></a>2.网络整体结构</h3><p>Strip R-CNN 建立在 <strong>Oriented R-CNN</strong> 框架上:</p>
+<ul>
+<li>使用 StripNet 替换原 Backbone；</li>
+<li>使用 Strip Head 替换原 Detection Head。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/4.png" alt="4.png"><br> 这是StripNet Backbone的结构<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/5.png" alt="5.png"><br>这是Strip head的结构</li>
+</ul>
+<h3 id="实验结果："><a href="#实验结果：" class="headerlink" title="实验结果："></a>实验结果：</h3><p>1.说明strip R-CNN  FLOPs 低，mAP 高，以此来说明该方法的优越性。<br>2.消融实验说明了条带卷积核大小的最佳配置(19,19,19,19)，顺序条带卷积优于并行条带卷积以及StripNet 的通用性。<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260805130121177.png" alt="image.png"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -513,8 +591,8 @@
 
 <h1 id="记录一下VSCODE的配置"><a href="#记录一下VSCODE的配置" class="headerlink" title="记录一下VSCODE的配置"></a>记录一下VSCODE的配置</h1><p>ssh-keygen -t ed25519 -C “claw@windows”</p>
 <p>有两个文件id_ed25519       （私钥）<br>id_ed25519.pub   （公钥），复制下来公钥</p>
-<p>ssh <a href="mailto:&#x63;&#108;&#97;&#x77;&#x40;&#56;&#x2e;&#x31;&#x35;&#x35;&#x2e;&#x31;&#52;&#54;&#x2e;&#49;&#x32;&#x35;">claw@8.155.146.125</a>登陆服务器，<br>mkdir -p ~&#x2F;.ssh<br>apt update &amp;&amp; apt install -y nano<br>nano ~&#x2F;.ssh&#x2F;authorized_keys写入公钥，<br><code>Ctrl+O</code> → 回车 → <code>Ctrl+X</code><br>然后chmod 700 ~&#x2F;.ssh<br>chmod 600 ~&#x2F;.ssh&#x2F;authorized_keys</p>
-<p>ssh <a href="mailto:&#99;&#108;&#x61;&#119;&#x40;&#56;&#x2e;&#x31;&#53;&#x35;&#x2e;&#49;&#52;&#x36;&#46;&#x31;&#x32;&#x35;">claw@8.155.146.125</a>能免密登就完成一半了，然后vscode下载remote -ssh</p>
+<p>ssh <a href="mailto:&#99;&#x6c;&#97;&#119;&#64;&#56;&#x2e;&#x31;&#53;&#53;&#x2e;&#49;&#52;&#x36;&#46;&#x31;&#50;&#53;">claw@8.155.146.125</a>登陆服务器，<br>mkdir -p ~&#x2F;.ssh<br>apt update &amp;&amp; apt install -y nano<br>nano ~&#x2F;.ssh&#x2F;authorized_keys写入公钥，<br><code>Ctrl+O</code> → 回车 → <code>Ctrl+X</code><br>然后chmod 700 ~&#x2F;.ssh<br>chmod 600 ~&#x2F;.ssh&#x2F;authorized_keys</p>
+<p>ssh <a href="mailto:&#99;&#108;&#97;&#x77;&#x40;&#x38;&#x2e;&#49;&#53;&#53;&#x2e;&#x31;&#52;&#x36;&#46;&#x31;&#50;&#x35;">claw@8.155.146.125</a>能免密登就完成一半了，然后vscode下载remote -ssh</p>
 <p>编辑这个文件写C:\Users\你的用户名.ssh\config，里面写<br>Host newserver<br>    HostName 8.155.146.125<br>    User claw<br>    IdentityFile C:\Users\你的用户名.ssh\id_ed25519</p>
 <p>如下是我的电脑的实际配置：<br>Host autodl-3090-318<br>  HostName connect.nmb2.seetacloud.com<br>  User root<br>  Port 43659<br>  IdentityFile C:\Users\23526.ssh\id_ed25519<br>  StrictHostKeyChecking no<br>要确保文件里面的缩进一致</p>
 
@@ -589,8 +667,8 @@
           <p><em>STFW, RTFM, RTFSC</em></p>
 <p>你可能会觉得字母F冒犯了你, 但事实上这个字母的含义从来都不是重点, 它只是反映出这三个缩写背后的传奇色彩而更容易被大家记住而已. 例如, RTFSC起源于Linux之父Linus Torvalds在1991年4月1日回复邮件中的第一句话, 目前在网上还能搜到当时的邮件列表. 有趣的是, Andrew S. Tanenbaum在Lessons Learned from 30 Years of MINIX 一文中把这封邮件作为MINIX操作系统容易学习的一个例子: 还处于学生时代的Linus Torvalds在10天之内就把MINIX学得差不多了.</p>
 <h1 id="提问的智慧"><a href="#提问的智慧" class="headerlink" title="提问的智慧"></a>提问的智慧</h1><h4 id="艾瑞克-史蒂文-雷蒙德（Eric-Steven-Raymond）"><a href="#艾瑞克-史蒂文-雷蒙德（Eric-Steven-Raymond）" class="headerlink" title="艾瑞克.史蒂文.雷蒙德（Eric Steven Raymond）"></a>艾瑞克.史蒂文.雷蒙德（Eric Steven Raymond）</h4><p>Thyrsus Enterprises</p>
-<p><a href="mailto:&#x65;&#115;&#x72;&#64;&#116;&#104;&#121;&#114;&#115;&#x75;&#115;&#x2e;&#x63;&#111;&#109;">esr@thyrsus.com</a></p>
-<h4 id="瑞克-莫恩（Rick-Moen）"><a href="#瑞克-莫恩（Rick-Moen）" class="headerlink" title="瑞克.莫恩（Rick Moen）"></a>瑞克.莫恩（Rick Moen）</h4><p><a href="mailto:&#114;&#101;&#115;&#x70;&#111;&#110;&#x64;&#45;&#x61;&#117;&#x74;&#111;&#x40;&#x6c;&#105;&#110;&#x75;&#x78;&#x6d;&#97;&#102;&#105;&#97;&#46;&#99;&#x6f;&#x6d;">respond-auto@linuxmafia.com</a><br>版权©2001, 2006 Eric S. Raymond, Rick Moen</p>
+<p><a href="mailto:&#x65;&#115;&#x72;&#x40;&#x74;&#104;&#x79;&#114;&#115;&#x75;&#x73;&#x2e;&#99;&#x6f;&#x6d;">esr@thyrsus.com</a></p>
+<h4 id="瑞克-莫恩（Rick-Moen）"><a href="#瑞克-莫恩（Rick-Moen）" class="headerlink" title="瑞克.莫恩（Rick Moen）"></a>瑞克.莫恩（Rick Moen）</h4><p><a href="mailto:&#x72;&#101;&#115;&#x70;&#111;&#110;&#100;&#45;&#x61;&#117;&#116;&#x6f;&#64;&#x6c;&#x69;&#110;&#x75;&#120;&#x6d;&#97;&#x66;&#105;&#97;&#x2e;&#99;&#111;&#x6d;">respond-auto@linuxmafia.com</a><br>版权©2001, 2006 Eric S. Raymond, Rick Moen</p>
 <h3 id="修订历史"><a href="#修订历史" class="headerlink" title="修订历史"></a>修订历史</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">修订版 3.9	2013年4月23日	esr</span><br><span class="line">修正链接</span><br><span class="line">修订版 3.8	2012年6月19日	esr</span><br><span class="line">修正链接</span><br><span class="line">修订版 3.7	2010年12月6日	esr</span><br><span class="line">对于英语为第二语言人士的有益建议</span><br><span class="line">修订版 3.7	2010年11月2日	esr</span><br><span class="line">几种翻译不见了</span><br><span class="line">修订版 3.6	2008年3月19日	esr</span><br><span class="line">小更新及新链接</span><br><span class="line">修订版 3.5	2008年1月2日	esr</span><br><span class="line">勘误及一些翻译链接</span><br><span class="line">修订版 3.4	2007年3月24日	esr</span><br><span class="line">新章节：“关于代码的问题”</span><br><span class="line">修订版 3.3	2006年9月29日	esr</span><br><span class="line">增加凯.尼格曼（Kai Niggemann）的一个好建议</span><br><span class="line">修订版 3.2	2006年1月10日	esr</span><br><span class="line">加入瑞克.莫恩（Rick Moen）编写的内容</span><br><span class="line">修订版 3.1	2004年10月28日	esr</span><br><span class="line">文档“谷歌是你的朋友！”</span><br><span class="line">修订版 3.0	2004年2月2日	esr</span><br><span class="line">主要新增在网页论坛应有的礼节</span><br></pre></td></tr></table></figure>
 
 <h3 id="原文：How-To-Ask-Questions-The-Smart-Way"><a href="#原文：How-To-Ask-Questions-The-Smart-Way" class="headerlink" title="原文：How To Ask Questions The Smart Way"></a><a target="_blank" rel="noopener" href="http://www.catb.org/~esr/faqs/smart-questions.html">原文：How To Ask Questions The Smart Way</a></h3><p>翻译：王刚 &lt;yafrank at 126 dot com &gt;<br>时间：2013年10月26日<br>内容</p>
@@ -653,7 +731,7 @@
 <p>如果你认为这种态度令人反感、以施惠者自居或傲慢自大，请检查你的假设，我们并未要求你屈服──事实上，假如你做了该做的努力，我们中的大多数将非常乐意平等地与你交流，并欢迎你接纳我们的文化。试图去帮助那些不愿自救的人对我们简直没有效率。不懂没有关系，但愚蠢地做事不行。</p>
 <p>所以，你不必在技术上很在行才能吸引我们的注意，但你 必须 表现出能引导你在行的姿态──机 敏、有想法、善于观察、乐于主动参与问题的解决。如果你做不到这些使你与众不同的事情，我们建议你付钱跟别人签商业服务合同，而不是要求黑客无偿帮助。</p>
 <p>如果你决定向我们求助，你不会想成为一名失败者，你也不想被看成一个失败者。得到快速有效回答的最好方法是使提问者看起来象个聪明、自信和有想法的人，并且暗示只是碰巧在某一特别问题上需要帮助。</p>
-<p>（欢迎对本文指正，可以将建议发至 <a href="mailto:&#x65;&#115;&#x72;&#64;&#116;&#104;&#x79;&#114;&#115;&#x75;&#x73;&#x2e;&#x63;&#111;&#x6d;">esr@thyrsus.com</a> 或 <a href="mailto:&#x72;&#x65;&#115;&#x70;&#x6f;&#x6e;&#100;&#x2d;&#x61;&#x75;&#116;&#111;&#64;&#x6c;&#105;&#110;&#117;&#x78;&#x6d;&#x61;&#x66;&#x69;&#97;&#x2e;&#x63;&#x6f;&#109;">respond-auto@linuxmafia.com</a>。 请注意，本文不想成为一般性的 网络礼仪 指南，我一般会拒绝那些与引出技术论坛中有用的回答不特别相关的建议。）</p>
+<p>（欢迎对本文指正，可以将建议发至 <a href="mailto:&#x65;&#x73;&#114;&#x40;&#x74;&#104;&#121;&#x72;&#x73;&#x75;&#x73;&#46;&#99;&#111;&#109;">esr@thyrsus.com</a> 或 <a href="mailto:&#114;&#101;&#115;&#112;&#111;&#110;&#100;&#x2d;&#97;&#x75;&#116;&#x6f;&#64;&#x6c;&#105;&#x6e;&#x75;&#x78;&#109;&#97;&#102;&#105;&#x61;&#46;&#x63;&#x6f;&#x6d;">respond-auto@linuxmafia.com</a>。 请注意，本文不想成为一般性的 网络礼仪 指南，我一般会拒绝那些与引出技术论坛中有用的回答不特别相关的建议。）</p>
 <h3 id="提问前"><a href="#提问前" class="headerlink" title="提问前"></a>提问前</h3><p>在通过电邮、新闻组或论坛提技术问题以前，做以下事情：</p>
 <ul>
 <li>尝试在你准备提问论坛的历史文档中搜索答案</li>
