@@ -20,27 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lijiayi-plus.github.io","root":"/tzcup-blog/","images":"/tzcup-blog/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":150,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/tzcup-blog/js/config.js" defer></script>
 
-    <meta name="description" content="记录一次配置首先安装node.js 1234apt update apt install -y curl curl -fsSL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_lts.x | bash -apt-get install -y nodejs 验证是否安装成功 12node -v npm -v 安装codex 12npm i -g @openai&#x2F;codex --re">
+    <meta name="description" content="RTMDet：通用单阶段目标检测器论文：RTMDet: An Empirical Study of Designing Real-Time Object Detectors代码：https:&#x2F;&#x2F; github.com&#x2F;open-mmlab&#x2F;mmdetection&#x2F;tree&#x2F;3.x&#x2F;configs&#x2F;rtmdetRTMDe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="F: autodl上的codex配置和VSCODE远程连接">
-<meta property="og:url" content="https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/index.html">
+<meta property="og:title" content="RTMDet">
+<meta property="og:url" content="https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/RTMDet/index.html">
 <meta property="og:site_name" content="tzcup-blog">
-<meta property="og:description" content="记录一次配置首先安装node.js 1234apt update apt install -y curl curl -fsSL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_lts.x | bash -apt-get install -y nodejs 验证是否安装成功 12node -v npm -v 安装codex 12npm i -g @openai&#x2F;codex --re">
+<meta property="og:description" content="RTMDet：通用单阶段目标检测器论文：RTMDet: An Empirical Study of Designing Real-Time Object Detectors代码：https:&#x2F;&#x2F; github.com&#x2F;open-mmlab&#x2F;mmdetection&#x2F;tree&#x2F;3.x&#x2F;configs&#x2F;rtmdetRTMDe">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-27T03:21:56.000Z">
-<meta property="article:modified_time" content="2026-07-27T03:23:41.071Z">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260805171729_1433_101.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260807081015748.png">
+<meta property="article:published_time" content="2026-08-07T00:11:05.000Z">
+<meta property="article:modified_time" content="2026-08-07T00:11:49.660Z">
 <meta property="article:author" content="+1">
 <meta property="article:tag" content="挑战杯,竞赛记录,项目日志,学习笔记,tech">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260805171729_1433_101.png">
 
 
-<link rel="canonical" href="https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/">
+<link rel="canonical" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/RTMDet/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/","path":"2026/07/27/F-autodl上的codex配置和VSCODE远程连接/","title":"F: autodl上的codex配置和VSCODE远程连接"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/RTMDet/","path":"2026/08/07/RTMDet/","title":"RTMDet"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>F: autodl上的codex配置和VSCODE远程连接 | tzcup-blog</title>
+<title>RTMDet | tzcup-blog</title>
   
 
 
@@ -134,7 +137,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">记录一次配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BVSCODE%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">记录一下VSCODE的配置</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#RTMDet%EF%BC%9A%E9%80%9A%E7%94%A8%E5%8D%95%E9%98%B6%E6%AE%B5%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B%E5%99%A8"><span class="nav-number">1.</span> <span class="nav-text">RTMDet：通用单阶段目标检测器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Backbone%EF%BC%9ACSPDarkNet"><span class="nav-number">1.1.</span> <span class="nav-text">Backbone：CSPDarkNet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Neck-CSP-PAFPN"><span class="nav-number">1.2.</span> <span class="nav-text">Neck, CSP-PAFPN</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B1%E4%BA%AB%E6%A3%80%E6%B5%8B%E5%A4%B4%EF%BC%88Heads%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">共享检测头（Heads）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%A8%E6%80%81%E6%A0%87%E7%AD%BE%E5%88%86%E9%85%8D%EF%BC%88%E8%BD%AF%E6%A0%87%E7%AD%BE%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">动态标签分配（软标签）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%A4%E9%98%B6%E6%AE%B5%E8%AE%AD%E7%BB%83"><span class="nav-number">1.5.</span> <span class="nav-text">两阶段训练</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E7%BB%93%E6%9E%9C%EF%BC%9A"><span class="nav-number">1.6.</span> <span class="nav-text">训练结果：</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,7 +197,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/">
+    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/RTMDet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/a1338ef4559b2143851e654ac8df8733.jpeg">
@@ -207,12 +210,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="F: autodl上的codex配置和VSCODE远程连接 | tzcup-blog">
+      <meta itemprop="name" content="RTMDet | tzcup-blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          F: autodl上的codex配置和VSCODE远程连接
+          RTMDet
         </h1>
 
         <div class="post-meta-container">
@@ -224,7 +227,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-07-27 11:21:56 / 修改时间：11:23:41" itemprop="dateCreated datePublished" datetime="2026-07-27T11:21:56+08:00">2026-07-27</time>
+      <time title="创建时间：2026-08-07 08:11:05 / 修改时间：08:11:49" itemprop="dateCreated datePublished" datetime="2026-08-07T08:11:05+08:00">2026-08-07</time>
     </span>
 
   
@@ -243,29 +246,28 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="记录一次配置"><a href="#记录一次配置" class="headerlink" title="记录一次配置"></a>记录一次配置</h1><p>首先安装node.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt update </span><br><span class="line">apt install -y curl </span><br><span class="line">curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-<p>验证是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<p>安装codex</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i -g @openai/codex --registry=https://registry.npmmirror.com</span><br><span class="line">codex --version</span><br></pre></td></tr></table></figure>
-<p>创建配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.codex</span><br><span class="line">apt update &amp;&amp; apt install -y nano</span><br><span class="line">nano ~/.codex/config.toml</span><br></pre></td></tr></table></figure>
-<p>保存：<code>Ctrl+O</code> → 回车 → <code>Ctrl+X</code><br>写以下的配置文件</p>
-<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">model_provider</span> = <span class="string">&quot;OpenAI&quot;</span> </span><br><span class="line"><span class="attr">model</span> = <span class="string">&quot;gpt-5.5&quot;</span> </span><br><span class="line"><span class="attr">model_reasoning_effort</span> = <span class="string">&quot;xhigh&quot;</span> </span><br><span class="line"><span class="attr">disable_response_storage</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">approval_policy</span> = <span class="string">&quot;never&quot;</span> </span><br><span class="line"><span class="attr">sandbox_mode</span> = <span class="string">&quot;workspace-write&quot;</span> </span><br><span class="line"><span class="attr">personality</span> = <span class="string">&quot;pragmatic&quot;</span> </span><br><span class="line"><span class="attr">web_search</span> = <span class="string">&quot;live&quot;</span> </span><br><span class="line"><span class="attr">suppress_unstable_features_warning</span> = <span class="literal">true</span> </span><br><span class="line"><span class="section">[features]</span> </span><br><span class="line"><span class="attr">plan_tool</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">apply_patch_freeform</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">view_image_tool</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">unified_exec</span> = <span class="literal">false</span> </span><br><span class="line"><span class="attr">streamable_shell</span> = <span class="literal">false</span> </span><br><span class="line"><span class="attr">rmcp_client</span> = <span class="literal">true</span> </span><br><span class="line"><span class="section">[model_providers.OpenAI]</span> </span><br><span class="line"><span class="attr">name</span> = <span class="string">&quot;OpenAI&quot;</span> </span><br><span class="line"><span class="attr">base_url</span> = <span class="string">&quot;https://api.hanbbq.top/v1&quot;</span> </span><br><span class="line"><span class="attr">wire_api</span> = <span class="string">&quot;responses&quot;</span> </span><br><span class="line"><span class="attr">requires_openai_auth</span> = <span class="literal">true</span> </span><br><span class="line"><span class="section">[sandbox_workspace_write]</span> </span><br><span class="line"><span class="attr">network_access</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>创建api的key文件<br>nano ~&#x2F;.codex&#x2F;auth.json</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span> </span><br><span class="line">	<span class="attr">&quot;OPENAI_API_KEY&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sk-af5be178876121dd50b4c491b1386b7c&quot;</span> </span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p><code>codex chat</code>验证是否成功</p>
-<p>安装tmux的命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update &amp;&amp; apt install tmux -y</span><br></pre></td></tr></table></figure>
-
-<h1 id="记录一下VSCODE的配置"><a href="#记录一下VSCODE的配置" class="headerlink" title="记录一下VSCODE的配置"></a>记录一下VSCODE的配置</h1><p>ssh-keygen -t ed25519 -C “claw@windows”</p>
-<p>有两个文件id_ed25519       （私钥）<br>id_ed25519.pub   （公钥），复制下来公钥</p>
-<p>ssh <a href="mailto:&#x63;&#108;&#97;&#x77;&#64;&#x38;&#x2e;&#49;&#53;&#x35;&#46;&#49;&#52;&#x36;&#x2e;&#49;&#x32;&#53;">claw@8.155.146.125</a>登陆服务器，<br>mkdir -p ~&#x2F;.ssh<br>apt update &amp;&amp; apt install -y nano<br>nano ~&#x2F;.ssh&#x2F;authorized_keys写入公钥，<br><code>Ctrl+O</code> → 回车 → <code>Ctrl+X</code><br>然后chmod 700 ~&#x2F;.ssh<br>chmod 600 ~&#x2F;.ssh&#x2F;authorized_keys</p>
-<p>ssh <a href="mailto:&#99;&#x6c;&#97;&#119;&#x40;&#x38;&#46;&#x31;&#53;&#x35;&#x2e;&#x31;&#x34;&#x36;&#46;&#49;&#x32;&#x35;">claw@8.155.146.125</a>能免密登就完成一半了，然后vscode下载remote -ssh</p>
-<p>编辑这个文件写C:\Users\你的用户名.ssh\config，里面写<br>Host newserver<br>    HostName 8.155.146.125<br>    User claw<br>    IdentityFile C:\Users\你的用户名.ssh\id_ed25519</p>
-<p>如下是我的电脑的实际配置：<br>Host autodl-3090-318<br>  HostName connect.nmb2.seetacloud.com<br>  User root<br>  Port 43659<br>  IdentityFile C:\Users\23526.ssh\id_ed25519<br>  StrictHostKeyChecking no<br>要确保文件里面的缩进一致</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="RTMDet：通用单阶段目标检测器"><a href="#RTMDet：通用单阶段目标检测器" class="headerlink" title="RTMDet：通用单阶段目标检测器"></a>RTMDet：通用单阶段目标检测器</h2><p>论文：RTMDet: An Empirical Study of Designing Real-Time Object Detectors<br>代码：https:&#x2F;&#x2F; github.com&#x2F;open-mmlab&#x2F;mmdetection&#x2F;tree&#x2F;3.x&#x2F;configs&#x2F;rtmdet<br>RTMDet是一个通用的单阶段目标检测器。通过在主干和颈部的基本构建块中探索大核卷积来提高模型效率，并相应地平衡模型深度、宽度和分辨率。同时进一步探索动态标签分配策略中的软标签以及数据扩充和优化策略的更好组合以提高模型准确性。其架构如图所示：<br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260805171729_1433_101.png" alt="微信图片_20260805171729_1433_101.png"></p>
+<h3 id="Backbone：CSPDarkNet"><a href="#Backbone：CSPDarkNet" class="headerlink" title="Backbone：CSPDarkNet"></a>Backbone：CSPDarkNet</h3><ul>
+<li><strong>基础结构</strong>：CSPDarkNet。</li>
+<li><strong>核心改进</strong>：在基本构建块中引入 <strong>5×5 深度卷积</strong>，增大有效感受野，提升上下文建模能力，显著提高精度。</li>
+<li><strong>多级特征输出</strong>：提取 C3、C4、C5 三个尺度的特征，供后续颈部融合。</li>
+</ul>
+<h3 id="Neck-CSP-PAFPN"><a href="#Neck-CSP-PAFPN" class="headerlink" title="Neck, CSP-PAFPN"></a>Neck, CSP-PAFPN</h3><ul>
+<li>采用与主干相同的基本块（CSP 结构），构建 CSP-PAFPN 进行多级特征融合。</li>
+<li><strong>平衡设计</strong>：通过增加颈部基本块的扩展率，使主干与颈部具有相近的容量，将更多参数和计算从主干移至颈部，<strong>在计算代价和精度之间取得更优权衡</strong>。</li>
+</ul>
+<h3 id="共享检测头（Heads）"><a href="#共享检测头（Heads）" class="headerlink" title="共享检测头（Heads）"></a>共享检测头（Heads）</h3><ul>
+<li><strong>共享参数策略</strong>：跨尺度检测头共享卷积权重，但为每个尺度保留独立的批归一化（BN）层，<strong>大幅减少参数量，同时保持检测精度</strong>。</li>
+</ul>
+<h3 id="动态标签分配（软标签）"><a href="#动态标签分配（软标签）" class="headerlink" title="动态标签分配（软标签）"></a>动态标签分配（软标签）</h3><ul>
+<li>引入<strong>软目标</strong>替代硬标签，改进动态标签分配策略：<br>  - 提升代价矩阵对高质量匹配的判别能力；<br>  - 降低标签分配中的噪声，从而提升模型精度。</li>
+</ul>
+<h3 id="两阶段训练"><a href="#两阶段训练" class="headerlink" title="两阶段训练"></a>两阶段训练</h3><ul>
+<li><strong>第一阶段</strong>：使用强数据增强（Mosaic、MixUp、随机旋转和剪切）。</li>
+<li><strong>第二阶段</strong>：使用弱数据增强（随机调整大小和翻转）。</li>
+<li><strong>优化器</strong>：采用 <strong>AdamW</strong>（通常用于 ViT，较少用于卷积检测器），但在本框架中表现出色。</li>
+</ul>
+<h3 id="训练结果："><a href="#训练结果：" class="headerlink" title="训练结果："></a>训练结果：</h3><p><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/20260807081015748.png" alt="image.png"></p>
 
     </div>
 
@@ -279,14 +281,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/tzcup-blog/2026/07/27/F%EF%BC%9A%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E6%8F%90%E9%97%AE/" rel="prev" title="F：如何科学地提问">
-                  <i class="fa fa-angle-left"></i> F：如何科学地提问
+                <a href="/tzcup-blog/2026/08/07/yolo-26/" rel="prev" title="yolo-26">
+                  <i class="fa fa-angle-left"></i> yolo-26
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/tzcup-blog/2026/07/27/F-%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="next" title="F: 一些模型的基础知识">
-                  F: 一些模型的基础知识 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

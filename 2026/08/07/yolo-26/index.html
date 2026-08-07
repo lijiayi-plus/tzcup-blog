@@ -20,27 +20,31 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"lijiayi-plus.github.io","root":"/tzcup-blog/","images":"/tzcup-blog/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":true,"style":"mac"},"fold":{"enable":false,"height":500},"language":true},"bookmark":{"enable":true,"color":"#222","save":"auto"},"mediumzoom":true,"lazyload":true,"pangu":true,"comments":{"style":"tabs","active":"utterances","storage":true,"lazyload":true,"nav":null,"activeClass":"utterances"},"stickytabs":true,"motion":{"enable":true,"async":false,"duration":150,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/tzcup-blog/js/config.js" defer></script>
 
-    <meta name="description" content="记录一次配置首先安装node.js 1234apt update apt install -y curl curl -fsSL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_lts.x | bash -apt-get install -y nodejs 验证是否安装成功 12node -v npm -v 安装codex 12npm i -g @openai&#x2F;codex --re">
+    <meta name="description" content="YOLO26 原文： Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models  代码： ultralytics&#x2F;ultralytics  网络解决的核心问题YOLO26 主要解决三个问题：依赖 NMS、DFL 检测头较重且回归范围受限、小目标可能没有正样本。 网络整体结构YOLO26 沿用 YOLO11 的基本框架，主">
 <meta property="og:type" content="article">
-<meta property="og:title" content="F: autodl上的codex配置和VSCODE远程连接">
-<meta property="og:url" content="https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/index.html">
+<meta property="og:title" content="yolo-26">
+<meta property="og:url" content="https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/yolo-26/index.html">
 <meta property="og:site_name" content="tzcup-blog">
-<meta property="og:description" content="记录一次配置首先安装node.js 1234apt update apt install -y curl curl -fsSL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_lts.x | bash -apt-get install -y nodejs 验证是否安装成功 12node -v npm -v 安装codex 12npm i -g @openai&#x2F;codex --re">
+<meta property="og:description" content="YOLO26 原文： Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models  代码： ultralytics&#x2F;ultralytics  网络解决的核心问题YOLO26 主要解决三个问题：依赖 NMS、DFL 检测头较重且回归范围受限、小目标可能没有正样本。 网络整体结构YOLO26 沿用 YOLO11 的基本框架，主">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-27T03:21:56.000Z">
-<meta property="article:modified_time" content="2026-07-27T03:23:41.071Z">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-network-architecture.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-dual-head-training.png">
+<meta property="og:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-ablation-results.png">
+<meta property="article:published_time" content="2026-08-07T00:01:38.000Z">
+<meta property="article:modified_time" content="2026-08-07T00:12:20.436Z">
 <meta property="article:author" content="+1">
 <meta property="article:tag" content="挑战杯,竞赛记录,项目日志,学习笔记,tech">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-network-architecture.png">
 
 
-<link rel="canonical" href="https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/">
+<link rel="canonical" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/yolo-26/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/","path":"2026/07/27/F-autodl上的codex配置和VSCODE远程连接/","title":"F: autodl上的codex配置和VSCODE远程连接"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/yolo-26/","path":"2026/08/07/yolo-26/","title":"yolo-26"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>F: autodl上的codex配置和VSCODE远程连接 | tzcup-blog</title>
+<title>yolo-26 | tzcup-blog</title>
   
 
 
@@ -134,7 +138,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E4%B8%80%E6%AC%A1%E9%85%8D%E7%BD%AE"><span class="nav-number">1.</span> <span class="nav-text">记录一次配置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%B0%E5%BD%95%E4%B8%80%E4%B8%8BVSCODE%E7%9A%84%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">记录一下VSCODE的配置</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#YOLO26"><span class="nav-number">1.</span> <span class="nav-text">YOLO26</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E8%A7%A3%E5%86%B3%E7%9A%84%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">网络解决的核心问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BD%91%E7%BB%9C%E6%95%B4%E4%BD%93%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.</span> <span class="nav-text">网络整体结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%AD%E7%BB%83%E7%AD%96%E7%95%A5"><span class="nav-number">1.3.</span> <span class="nav-text">训练策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#YOLO26-%E8%AE%AD%E7%BB%83%E6%B5%81%E7%A8%8B"><span class="nav-number">1.4.</span> <span class="nav-text">YOLO26 训练流程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="nav-number">1.5.</span> <span class="nav-text">实验结果</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -194,7 +198,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/07/27/F-autodl%E4%B8%8A%E7%9A%84codex%E9%85%8D%E7%BD%AE%E5%92%8CVSCODE%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/">
+    <link itemprop="mainEntityOfPage" href="https://lijiayi-plus.github.io/tzcup-blog/2026/08/07/yolo-26/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/a1338ef4559b2143851e654ac8df8733.jpeg">
@@ -207,12 +211,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="F: autodl上的codex配置和VSCODE远程连接 | tzcup-blog">
+      <meta itemprop="name" content="yolo-26 | tzcup-blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          F: autodl上的codex配置和VSCODE远程连接
+          yolo-26
         </h1>
 
         <div class="post-meta-container">
@@ -224,7 +228,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-07-27 11:21:56 / 修改时间：11:23:41" itemprop="dateCreated datePublished" datetime="2026-07-27T11:21:56+08:00">2026-07-27</time>
+      <time title="创建时间：2026-08-07 08:01:38 / 修改时间：08:12:20" itemprop="dateCreated datePublished" datetime="2026-08-07T08:01:38+08:00">2026-08-07</time>
     </span>
 
   
@@ -243,29 +247,22 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="记录一次配置"><a href="#记录一次配置" class="headerlink" title="记录一次配置"></a>记录一次配置</h1><p>首先安装node.js</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">apt update </span><br><span class="line">apt install -y curl </span><br><span class="line">curl -fsSL https://deb.nodesource.com/setup_lts.x | bash -</span><br><span class="line">apt-get install -y nodejs</span><br></pre></td></tr></table></figure>
-<p>验证是否安装成功</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v </span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
-<p>安装codex</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm i -g @openai/codex --registry=https://registry.npmmirror.com</span><br><span class="line">codex --version</span><br></pre></td></tr></table></figure>
-<p>创建配置</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> -p ~/.codex</span><br><span class="line">apt update &amp;&amp; apt install -y nano</span><br><span class="line">nano ~/.codex/config.toml</span><br></pre></td></tr></table></figure>
-<p>保存：<code>Ctrl+O</code> → 回车 → <code>Ctrl+X</code><br>写以下的配置文件</p>
-<figure class="highlight toml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">model_provider</span> = <span class="string">&quot;OpenAI&quot;</span> </span><br><span class="line"><span class="attr">model</span> = <span class="string">&quot;gpt-5.5&quot;</span> </span><br><span class="line"><span class="attr">model_reasoning_effort</span> = <span class="string">&quot;xhigh&quot;</span> </span><br><span class="line"><span class="attr">disable_response_storage</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">approval_policy</span> = <span class="string">&quot;never&quot;</span> </span><br><span class="line"><span class="attr">sandbox_mode</span> = <span class="string">&quot;workspace-write&quot;</span> </span><br><span class="line"><span class="attr">personality</span> = <span class="string">&quot;pragmatic&quot;</span> </span><br><span class="line"><span class="attr">web_search</span> = <span class="string">&quot;live&quot;</span> </span><br><span class="line"><span class="attr">suppress_unstable_features_warning</span> = <span class="literal">true</span> </span><br><span class="line"><span class="section">[features]</span> </span><br><span class="line"><span class="attr">plan_tool</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">apply_patch_freeform</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">view_image_tool</span> = <span class="literal">true</span> </span><br><span class="line"><span class="attr">unified_exec</span> = <span class="literal">false</span> </span><br><span class="line"><span class="attr">streamable_shell</span> = <span class="literal">false</span> </span><br><span class="line"><span class="attr">rmcp_client</span> = <span class="literal">true</span> </span><br><span class="line"><span class="section">[model_providers.OpenAI]</span> </span><br><span class="line"><span class="attr">name</span> = <span class="string">&quot;OpenAI&quot;</span> </span><br><span class="line"><span class="attr">base_url</span> = <span class="string">&quot;https://api.hanbbq.top/v1&quot;</span> </span><br><span class="line"><span class="attr">wire_api</span> = <span class="string">&quot;responses&quot;</span> </span><br><span class="line"><span class="attr">requires_openai_auth</span> = <span class="literal">true</span> </span><br><span class="line"><span class="section">[sandbox_workspace_write]</span> </span><br><span class="line"><span class="attr">network_access</span> = <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-
-<p>创建api的key文件<br>nano ~&#x2F;.codex&#x2F;auth.json</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span> </span><br><span class="line">	<span class="attr">&quot;OPENAI_API_KEY&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sk-af5be178876121dd50b4c491b1386b7c&quot;</span> </span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p><code>codex chat</code>验证是否成功</p>
-<p>安装tmux的命令：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt update &amp;&amp; apt install tmux -y</span><br></pre></td></tr></table></figure>
-
-<h1 id="记录一下VSCODE的配置"><a href="#记录一下VSCODE的配置" class="headerlink" title="记录一下VSCODE的配置"></a>记录一下VSCODE的配置</h1><p>ssh-keygen -t ed25519 -C “claw@windows”</p>
-<p>有两个文件id_ed25519       （私钥）<br>id_ed25519.pub   （公钥），复制下来公钥</p>
-<p>ssh <a href="mailto:&#x63;&#108;&#97;&#x77;&#64;&#x38;&#x2e;&#49;&#53;&#x35;&#46;&#49;&#52;&#x36;&#x2e;&#49;&#x32;&#53;">claw@8.155.146.125</a>登陆服务器，<br>mkdir -p ~&#x2F;.ssh<br>apt update &amp;&amp; apt install -y nano<br>nano ~&#x2F;.ssh&#x2F;authorized_keys写入公钥，<br><code>Ctrl+O</code> → 回车 → <code>Ctrl+X</code><br>然后chmod 700 ~&#x2F;.ssh<br>chmod 600 ~&#x2F;.ssh&#x2F;authorized_keys</p>
-<p>ssh <a href="mailto:&#99;&#x6c;&#97;&#119;&#x40;&#x38;&#46;&#x31;&#53;&#x35;&#x2e;&#x31;&#x34;&#x36;&#46;&#49;&#x32;&#x35;">claw@8.155.146.125</a>能免密登就完成一半了，然后vscode下载remote -ssh</p>
-<p>编辑这个文件写C:\Users\你的用户名.ssh\config，里面写<br>Host newserver<br>    HostName 8.155.146.125<br>    User claw<br>    IdentityFile C:\Users\你的用户名.ssh\id_ed25519</p>
-<p>如下是我的电脑的实际配置：<br>Host autodl-3090-318<br>  HostName connect.nmb2.seetacloud.com<br>  User root<br>  Port 43659<br>  IdentityFile C:\Users\23526.ssh\id_ed25519<br>  StrictHostKeyChecking no<br>要确保文件里面的缩进一致</p>
+    <div class="post-body" itemprop="articleBody"><h2 id="YOLO26"><a href="#YOLO26" class="headerlink" title="YOLO26"></a>YOLO26</h2><blockquote>
+<p><strong>原文：</strong> <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2606.03748">Ultralytics YOLO26: Unified Real-Time End-to-End Vision Models</a>  <br><strong>代码：</strong> <a target="_blank" rel="noopener" href="https://github.com/ultralytics/ultralytics">ultralytics&#x2F;ultralytics</a></p>
+</blockquote>
+<h3 id="网络解决的核心问题"><a href="#网络解决的核心问题" class="headerlink" title="网络解决的核心问题"></a>网络解决的核心问题</h3><p>YOLO26 主要解决三个问题：依赖 NMS、DFL 检测头较重且回归范围受限、小目标可能没有正样本。</p>
+<h3 id="网络整体结构"><a href="#网络整体结构" class="headerlink" title="网络整体结构"></a>网络整体结构</h3><p><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-network-architecture.png" alt="yolo26-network-architecture.png"><br>YOLO26 沿用 YOLO11 的基本框架，主要改进检测头、标签分配和训练方法，并对 Backbone&#x2F;Neck 做轻量调整（如增加注意力机制）。</p>
+<h3 id="训练策略"><a href="#训练策略" class="headerlink" title="训练策略"></a>训练策略</h3><p><strong>1. 双检测头</strong><br><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-dual-head-training.png" alt="yolo26-dual-head-training.png"></p>
+<p><em>图 2：YOLO26 双检测头训练流程。</em><br>一对多头提供密集监督，一对一头负责无 NMS 推理。Progressive Loss 将训练重点逐渐转向一对一头。<br><strong>2. 移除 DFL</strong>：YOLO26 以直接框回归和 L1 损失替代 DFL，减轻检测头并解除回归范围限制。<br><strong>3. 小目标标签分配</strong>：STAL 在候选筛选时临时放大小框，使其获得正样本。<br><strong>4. 其它改进</strong>：MuSGD 用于加快收敛等等。</p>
+<h3 id="YOLO26-训练流程"><a href="#YOLO26-训练流程" class="headerlink" title="YOLO26 训练流程"></a>YOLO26 训练流程</h3><ol>
+<li><strong>Backbone + Neck</strong>：生成多尺度特征图和固定网格预测点。</li>
+<li><strong>两个检测头分支</strong>：每个网格点分别输出类别分数和预测框。</li>
+<li><strong>Task-Aligned Assignment</strong>：根据当前预测和真实标注为两个分支选择正样本。一对多分支为每个目标选择多个点；一对一分支最终只保留一个点。</li>
+<li><strong>两类 Loss</strong>：分别使用各自选中的正样本计算分类损失和边界框损失。</li>
+<li><strong>Progressive Loss Weighting</strong>：训练后期逐渐降低一对多损失的权重，更重视一对一分支。</li>
+<li><strong>MuSGD Optimizer</strong>：根据总损失更新网络参数。</li>
+</ol>
+<h3 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h3><p><img data-src="https://bucket-plusone.oss-cn-wuhan-lr.aliyuncs.com/img/yolo26-ablation-results.png" alt="yolo26-ablation-results.png"><br>结果表明，移除 DFL 能降低模型复杂度和推理开销，但会暂时损失精度；L1、STAL 和 Backbone&#x2F;Neck 改进可以弥补这部分损失。端到端训练、Progressive Loss、MuSGD、预训练和超参数搜索则进一步提升性能，说明 YOLO26 的效果来自多项结构与训练策略的协同改进。</p>
 
     </div>
 
@@ -279,13 +276,13 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/tzcup-blog/2026/07/27/F%EF%BC%9A%E5%A6%82%E4%BD%95%E7%A7%91%E5%AD%A6%E5%9C%B0%E6%8F%90%E9%97%AE/" rel="prev" title="F：如何科学地提问">
-                  <i class="fa fa-angle-left"></i> F：如何科学地提问
+                <a href="/tzcup-blog/2026/08/05/strip-R-CNN/" rel="prev" title="strip R-CNN">
+                  <i class="fa fa-angle-left"></i> strip R-CNN
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/tzcup-blog/2026/07/27/F-%E4%B8%80%E4%BA%9B%E6%A8%A1%E5%9E%8B%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" rel="next" title="F: 一些模型的基础知识">
-                  F: 一些模型的基础知识 <i class="fa fa-angle-right"></i>
+                <a href="/tzcup-blog/2026/08/07/RTMDet/" rel="next" title="RTMDet">
+                  RTMDet <i class="fa fa-angle-right"></i>
                 </a>
             </div>
           </div>
